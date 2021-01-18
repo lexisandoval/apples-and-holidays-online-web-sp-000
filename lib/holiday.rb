@@ -65,16 +65,29 @@ def all_supplies_in_holidays(holiday_hash)
   #   Fourth Of July: Fireworks, BBQ
   # etc.
   holiday_hash.each do |season, holiday|
-    temp = []
+
     if season == :winter
       puts "Winter:"
       if holiday == :christmas
+        puts "Christmas:"
         holiday.each do |holiday, supplies|
-          temp << supplies
-          temp.join(", ")
-
+          supplies.each do |supplies|
+            puts supplies
+          end
         end
-        els
+      elsif holiday == :new_years
+        puts "New Years:"
+        holiday.each do |holiday,supplies|
+          supplies.each do |supplies|
+            puts supplies
+          end
+        end
+      end
+    elsif season == :summer
+      puts "Summer:"
+
+      
+    end
 
 end
 
