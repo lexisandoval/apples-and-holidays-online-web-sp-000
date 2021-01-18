@@ -66,41 +66,13 @@ def all_supplies_in_holidays(holiday_hash)
   # etc.
 
   holiday_hash.each do |season, holiday|
-    if season == :winter
-      winter = :winter.to_s
-      winter.capitalize!
-      puts "#{winter}:"
-      if holiday == :christmas
-        christmas = :christmas.to_s
-        christmas.capitalize!
-        puts "#{christmas}:"
-        holiday.each do |holiday, supplies|
-          puts supplies.join(", ")
-        end
-      elsif holiday == :new_years
-          newyears = :new_years.to_s
-          newyears.capitalize!
-          puts "#{newyears}:"
-          holiday.each do |holiday, supplies|
-            puts supplies.join(", ")
-          end
-      end
-    elsif
-      if season == :summer
-        summer = :summer.to_s
-        summer.capitalize!
-        puts "#{summer}:"
-        if holiday == :fourth_of_july
-          fourth = :fourth_of_july.to_s
-          fourth.capitalize!
-          puts "#{fourth}:"
-          holiday.each do |holiday, supplies|
-            puts supplies.join(", ")
-          end
-        end
-      end
+    puts season.to_s.capitalize! << ":"
+    holiday.each do |holiday, supplies|
+      supplies = supplies.join(", ")
+      holiday = holiday.to_s.split("_").map {|w| w.capitalize}.join(" ")<< ":"
+      puts "  " + holiday + " " + supplies
     end
-  end
+  end 
 end
 
 def all_holidays_with_bbq(holiday_hash)
