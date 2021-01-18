@@ -69,6 +69,11 @@ def all_supplies_in_holidays(holiday_hash)
       winter = :winter.to_s
       winter.capitalize!
       puts "#{winter}:"
+      if holiday == :christmas
+        christmas = :christmas.to_s
+        christmas.capitalize!
+        puts "#{christmas}:"
+      end
     end
   end
 end
