@@ -77,6 +77,27 @@ def all_supplies_in_holidays(holiday_hash)
         holiday.each do |holiday, supplies|
           puts supplies.join(", ")
         end
+      elsif holiday == :new_years
+          newyears = :new_years.to_s
+          newyears.capitalize!
+          puts "#{newyears}:"
+          holiday.each do |holiday, supplies|
+            puts supplies.join(", ")
+          end
+      end
+    elsif
+      if season == :summer
+        summer = :summer.to_s
+        summer.capitalize!
+        puts "#{summer}:"
+        if holiday == :fourth_of_july
+          fourth = :fourth_of_july.to_s
+          fourth.capitalize!
+          puts "#{fourth}:"
+          holiday.each do |holiday, supplies|
+            puts supplies.join(", ")
+          end
+        end
       end
     end
   end
